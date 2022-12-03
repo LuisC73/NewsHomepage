@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;800&display=swap");
+
+$white: hsl(0, 0%, 98%);
+$whiteOff: hsl(36, 100%, 99%);
+$gray: hsl(0, 0%, 41%);
+$black: hsl(0, 0%, 8%);
+$softOrange: hsl(35, 77%, 62%);
+$softRed: hsl(5, 85%, 63%);
+
+$blues: (
+  "grayish": hsl(233, 8%, 79%),
+  "dark": hsl(236, 13%, 42%),
+  "veryDark": hsl(240, 100%, 5%),
+);
+
+$font: "Inter", sans-serif;

@@ -1,0 +1,23 @@
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin grid($numColumns, $tamColumns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($numColumns, $tamColumns);
+  gap: $gap;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $gap;
+  }
+}
+
+@mixin media($tamaño: 768px) {
+  @media screen and (max-width: $tamaño) {
+    @content;
+  }
+}

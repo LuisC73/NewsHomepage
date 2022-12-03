@@ -3,8 +3,24 @@
 
 body {
   font-family: vars.$font;
-  overflow-x: hidden;
-  font-size: 18px;
+  overflow: hidden;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem 8rem;
+
+  @include mixin.media() {
+    width: 90vw;
+    height: 100vh;
+  }
 }
 
 .attribution {

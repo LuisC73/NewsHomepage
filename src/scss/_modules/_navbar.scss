@@ -1,0 +1,22 @@
+@use "../_layout/vars" as vars;
+@use "../_layout/mixins" as mixin;
+
+.navbar {
+  width: 100%;
+  @include mixin.flex(space-around, center, row);
+
+  &__figure {
+    width: 3rem;
+  }
+
+  &__ul {
+    @include mixin.flex(space-around, center, row);
+    column-gap: 2rem;
+  }
+
+  &__li {
+    font-size: 0.85rem;
+    color: vars.$gray;
+    cursor: pointer;
+  }
+}
