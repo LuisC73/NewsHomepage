@@ -12,17 +12,6 @@ body {
   height: 100vh;
 }
 
-.home {
-  width: 100vw;
-  height: 100vh;
-  padding: 4rem 8rem;
-
-  @include mixin.media() {
-    width: 90vw;
-    height: 100vh;
-  }
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;

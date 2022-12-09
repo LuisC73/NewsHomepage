@@ -3,7 +3,7 @@
 
 .navbar {
   width: 100%;
-  @include mixin.flex(space-around, center, row);
+  @include mixin.flex(space-between, center, row);
 
   &__figure {
     width: 3rem;
