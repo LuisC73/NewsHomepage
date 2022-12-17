@@ -4,6 +4,7 @@
 .navbar {
   width: 100%;
   @include mixin.flex(space-between, center, row);
+  position: relative;
 
   &__figure {
     width: 3rem;
@@ -12,11 +13,56 @@
   &__ul {
     @include mixin.flex(space-around, center, row);
     column-gap: 2rem;
+
+    @include mixin.media() {
+      position: absolute;
+      right: 0;
+      top: -15px;
+      @include mixin.flex(flex-start, flex-start, column);
+      width: 70vw;
+      height: 100vh;
+      row-gap: 2rem;
+      transform: translateX(110%);
+      transition: 0.6s;
+      background-color: vars.$white;
+      padding: 1.4rem 2rem;
+
+      &--active {
+        transform: translateX(0%);
+        box-shadow: -154px 0 10px rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 
   &__li {
     font-size: 0.85rem;
     color: vars.$gray;
     cursor: pointer;
+
+    &:hover {
+      transition: 0.5s;
+      color: vars.$softRed;
+    }
+
+    @include mixin.media() {
+      font-size: 1.6rem;
+      color: vars.$black;
+    }
+  }
+
+  &__icon {
+    display: none;
+    width: fit-content;
+    font-size: 2.4rem;
+
+    @include mixin.media() {
+      display: block;
+
+      &--close {
+        margin-left: auto;
+        font-size: 2.7rem;
+        margin-bottom: 4rem;
+      }
+    }
   }
 }

@@ -12,11 +12,19 @@
   width: 100vw;
   height: 100vh;
   padding: 2rem 13rem;
+  overflow: hidden;
 
   @include mixin.media() {
-    width: 90vw;
-    height: 100vh;
-    padding: 0;
+    padding: 1rem;
+
+    grid-template-areas:
+      "nav"
+      "img"
+      "title"
+      "more"
+      "about"
+      "div";
+    gap: 0rem;
   }
 
   &__figure {
@@ -25,6 +33,12 @@
     height: 15rem;
     width: 38rem;
     margin-top: 0.8rem;
+
+    @include mixin.media() {
+      width: 100%;
+      height: 19rem;
+      margin-top: 0rem;
+    }
   }
 
   &__img {
@@ -36,12 +50,21 @@
     grid-area: title;
     height: 7.2rem;
     width: 14rem;
+
+    @include mixin.media() {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__h1 {
     font-size: 2rem;
     letter-spacing: 0.07rem;
     font-weight: 800;
+
+    @include mixin.media() {
+      font-size: 2.4rem;
+    }
   }
 
   &__info {
@@ -49,10 +72,15 @@
     height: 7.2rem;
     width: 22rem;
     @include mixin.flex(space-between, flex-start, column);
+
+    @include mixin.media() {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: vars.$gray;
     text-align: justify;
   }
@@ -60,13 +88,19 @@
   &__a {
     @include mixin.flex(center, center, row);
     width: 10rem;
-    height: 2.5rem;
+    height: 2rem;
     background-color: vars.$softRed;
     color: vars.$white;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+
+    &:hover {
+      transition: 0.5s;
+      background-color: vars.$black;
+      color: vars.$white;
+    }
   }
 }
 
@@ -77,13 +111,23 @@
 
 .about {
   grid-area: about;
-  background-color: red;
+  background-color: map-get(vars.$blues, "veryDark");
   width: 19rem;
   margin-top: 0.8rem;
+
+  @include mixin.media() {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .div {
   grid-area: div;
   background-color: darkblue;
   height: 8rem;
+
+  @include mixin.media() {
+    width: 100%;
+    height: 100%;
+  }
 }
