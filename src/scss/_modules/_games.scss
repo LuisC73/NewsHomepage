@@ -52,6 +52,7 @@
     font-weight: 700;
     color: vars.$gray;
     transition: 0.5s;
+    cursor: pointer;
 
     &:hover {
       color: vars.$softRed;
