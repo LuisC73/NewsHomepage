@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://luisc73.github.io/NewsHomepage">
+    <a href="https://luisc73.github.io/NewsHomepage/">
       Ingresar
     </a>
   </h3>
