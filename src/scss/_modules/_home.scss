@@ -5,8 +5,8 @@
   display: grid;
   grid-template-areas:
     "nav nav nav"
-    "img img about"
-    "title more about"
+    "img img news"
+    "title more news"
     "div div div";
   gap: 1rem;
   width: 100vw;
@@ -22,7 +22,7 @@
       "img"
       "title"
       "more"
-      "about"
+      "news"
       "div";
     gap: 0rem;
   }
@@ -107,18 +107,6 @@
 .header {
   grid-area: nav;
   height: fit-content;
-}
-
-.about {
-  grid-area: about;
-  background-color: map-get(vars.$blues, "veryDark");
-  width: 19rem;
-  margin-top: 0.8rem;
-
-  @include mixin.media() {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .div {

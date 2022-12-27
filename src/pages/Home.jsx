@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import NewsComponent from "../components/NewsContainer";
 
 function HomeComponent() {
   return (
@@ -11,7 +12,7 @@ function HomeComponent() {
           className="home__img"
         />
       </figure>
-      <section className="about"></section>
+      <NewsComponent />
       <section className="home__title">
         <h1 className="home__h1">The Bright Future of Web 3.0?</h1>
       </section>

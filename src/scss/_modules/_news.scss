@@ -1,0 +1,50 @@
+@use "../_layout/vars" as vars;
+@use "../_layout/mixins" as mixin;
+
+.news {
+  grid-area: news;
+  background-color: map-get(vars.$blues, "veryDark");
+  width: 19rem;
+  margin-top: 0.8rem;
+  padding: 1rem;
+
+  @include mixin.media() {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__h2 {
+    color: vars.$softOrange;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  &__wrapper {
+    @include mixin.flex(space-between, flex-start, column);
+    row-gap: 1rem;
+    margin-top: 1rem;
+
+    height: 85%;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid map-get(vars.$blues, "dark");
+    padding-bottom: 1.7rem;
+  }
+
+  &__h3 {
+    color: vars.$white;
+    margin-bottom: 0.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$softOrange;
+    }
+  }
+
+  &__p {
+    color: vars.$gray;
+    font-size: 0.9rem;
+  }
+}
