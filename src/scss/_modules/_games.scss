@@ -51,6 +51,11 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: vars.$gray;
+    transition: 0.5s;
+
+    &:hover {
+      color: vars.$softRed;
+    }
   }
 
   &__h4 {
