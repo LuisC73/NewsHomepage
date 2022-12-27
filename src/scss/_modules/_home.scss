@@ -7,7 +7,7 @@
     "nav nav nav"
     "img img news"
     "title more news"
-    "div div div";
+    "games games games";
   gap: 1rem;
   width: 100vw;
   height: 100vh;
@@ -16,6 +16,7 @@
 
   @include mixin.media() {
     padding: 1rem;
+    overflow-y: auto;
 
     grid-template-areas:
       "nav"
@@ -23,7 +24,7 @@
       "title"
       "more"
       "news"
-      "div";
+      "games";
     gap: 0rem;
   }
 
@@ -107,15 +108,4 @@
 .header {
   grid-area: nav;
   height: fit-content;
-}
-
-.div {
-  grid-area: div;
-  background-color: darkblue;
-  height: 8rem;
-
-  @include mixin.media() {
-    width: 100%;
-    height: 100%;
-  }
 }

@@ -1,0 +1,66 @@
+@use "../_layout/vars" as vars;
+@use "../_layout/mixins" as mixin;
+
+.games {
+  grid-area: games;
+  height: 8rem;
+
+  @include mixin.flex(space-between, center, row);
+  column-gap: 1rem;
+
+  @include mixin.media() {
+    width: 100%;
+    height: 100%;
+    @include mixin.flex(space-between, center, column);
+    row-gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__figure {
+    width: 50%;
+    height: 100%;
+    @include mixin.media() {
+      width: 7rem;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    @include mixin.media() {
+      width: 5.5rem;
+    }
+  }
+
+  &__item {
+    @include mixin.flex(space-between, center, row);
+    column-gap: 1rem;
+
+    @include mixin.media() {
+      width: 100%;
+      height: 7rem;
+    }
+  }
+
+  &__div {
+    @include mixin.flex(space-between, flex-start, column);
+    height: 100%;
+    row-gap: 0.5rem;
+  }
+
+  &__h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: vars.$gray;
+  }
+
+  &__h4 {
+    color: vars.$black;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  &__p {
+    font-size: 0.8rem;
+    color: vars.$gray;
+  }
+}

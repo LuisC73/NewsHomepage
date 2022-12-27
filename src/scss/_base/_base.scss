@@ -3,13 +3,17 @@
 
 body {
   font-family: vars.$font;
-  overflow: hidden;
+  overflow-x: hidden;
   font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
+  @include mixin.media() {
+    overflow-y: auto;
+  }
 }
 
 .attribution {

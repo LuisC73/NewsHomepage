@@ -1,3 +1,4 @@
+import GamesContainer from "../components/GamesContainer";
 import Navbar from "../components/Navbar";
 import NewsComponent from "../components/NewsContainer";
 
@@ -26,7 +27,7 @@ function HomeComponent() {
           Read more
         </a>
       </section>
-      <section className="div"></section>
+      <GamesContainer />
     </div>
   );
 }
